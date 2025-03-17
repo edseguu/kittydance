@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="demo">
+        <img src="assets/mp4-unscreen.gif" autoplay muted loop style="
+            width: 500px;
+            height: 500px;"
+        >
+    </div>
+    <audio id="cancion" src="assets/cancion.mp3" loop></audio>
+
+    <main class="pagina1">
+        <button onclick="baile(), play()">BAILE</button>
+    </main>
+    <main class="pagina2">
+        <button onclick="confe()">CONFETTI</button>
+    </main>
+
+
+
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</body>
+</html>
