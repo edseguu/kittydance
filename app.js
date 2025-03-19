@@ -1,3 +1,20 @@
+const cancionesazar = [
+  "https://raw.githubusercontent.com/edseguu/canciones/main/cancion%20(1).mp3",
+  "https://raw.githubusercontent.com/edseguu/canciones/main/cancion%20(2).mp3",
+  "https://raw.githubusercontent.com/edseguu/canciones/main/cancion%20(3).mp3",
+  "https://raw.githubusercontent.com/edseguu/canciones/main/cancion%20(4).mp3",
+  "https://raw.githubusercontent.com/edseguu/canciones/main/cancion%20(5).mp3"
+]
+function cancionazar(){
+  let i = Math.floor(Math.random() * cancionesazar.length);
+  let r = cancionesazar[i];
+  
+  var audio = new Audio(r);
+  audio.loop = true; // Establecer loop en true
+  audio.play();
+  
+}
+
 function baile(){
 
     const paginavieja = document.querySelector(".pagina1");
@@ -44,7 +61,25 @@ function confe(){
 
 }
 
-function play(){
-  const cancionelemento = document.getElementById("cancion");
+function cancion1(){
+  const cancionelemento = document.getElementById("cancion1");
   cancionelemento.play()
 }
+
+function cancion2(){
+  const cancionelemento = document.getElementById("cancion2");
+  cancionelemento.play()
+}
+
+function cancion3(){
+  const cancionelemento = document.getElementById("cancion3");
+  cancionelemento.play()
+}
+
+document.addEventListener('touchmove', function (event) {
+  if (event.scale !== 1) {
+      event.preventDefault(); // Evita el gesto de zoom
+  }
+}, { passive: false });
+
+
