@@ -292,4 +292,34 @@ button {
   #checkboxInput:hover + .toggleSwitch {
     background-color: rgb(61, 61, 61);
   }
+
+
+  .rein {
+    position: fixed;
+    left: 87%;
+    bottom: 95%;
+    width: 3em;
+    height: 3em;
+    transform: rotateX(30deg);
+    border-radius: 0.2em;
+    border: 1px solid #3f3f3f;
+    box-shadow: 0 0.3em 0 0.1em #3f3f3f;
+    transition: all 150ms;
+  }
+  
+  .rein::after {
+    position: absolute;
+    content: "R";
+    inset-block: 0;
+    inset-inline: 0;
+    bottom: 30%;
+    text-align: center;
+    padding-top: 30%;
+    color: #3f3f3f;
+  }
+  
+  .rein:active {
+    transform: rotateX(30deg) translateY(0.3em);
+    box-shadow: 0 0 0 0 #3f3f3f;
+  }
   
