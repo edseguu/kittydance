@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Evita que el usuario seleccione texto o haga zoom */
+        body {
+            touch-action: pan-y; /* Solo permite desplazamiento vertical */
+            user-select: none; /* Evita la selección de texto */
+            -webkit-user-select: none; /* Para navegadores basados en WebKit (Safari) */
+            -moz-user-select: none; /* Para Firefox */
+            -ms-user-select: none; /* Para Internet Explorer/Edge */
+        }
+    </style>
 </head>
 <body>
 
@@ -14,10 +25,23 @@
             height: 500px;"
         >
     </div>
-    <audio id="cancion" src="assets/cancion.mp3" loop></audio>
+    <audio id="cancion1" src="assets/cancion.mp3" loop></audio>
+    <audio id="cancion2" src="assets/chona.mp3" loop></audio>
+    <audio id="cancion3" src="assets/cule.mp3" loop></audio>
 
     <main class="pagina1">
-        <button onclick="baile(), play()">BAILE</button>
+
+        <div class="container">
+            <span class="hover-me">Selecciona la canción</span>
+            <div class="tooltip">
+              <p>Hola👋</p>
+            </div>
+          </div>
+          
+        <button class="c1" onclick="baile(), cancion1()">Flashes</button>
+        <button class="c2" onclick="baile(), cancion2()">La chona</button>
+        <button class="c3" onclick="baile(), cancion3()">La culebritica</button>
+        <button class="c4" onclick="cancionazar(), baile()">Cancion azar</button>
     </main>
     <main class="pagina2">
         <button onclick="confe()">CONFETTI</button>
