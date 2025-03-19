@@ -36,7 +36,7 @@ body{
     display: none;
 }
 
-button {
+.button1 {
     --glow-color: rgb(217, 176, 255);
     --glow-spread-color: rgba(191, 123, 255, 0.781);
     --enhanced-glow-color: rgb(231, 206, 255);
@@ -60,7 +60,7 @@ button {
     transition: all 0.3s;
    }
    
-   button::after {
+   .button1::after {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -74,7 +74,7 @@ button {
     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
    }
    
-   button:hover {
+   .button1:hover {
     color: var(--btn-color);
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .25em var(--glow-color),
@@ -82,7 +82,7 @@ button {
            inset 0 0 .75em .25em var(--glow-color);
    }
    
-   button:active {
+   .button1:active {
     box-shadow: 0 0 0.6em .25em var(--glow-color),
            0 0 2.5em 2em var(--glow-spread-color),
            inset 0 0 .5em .25em var(--glow-color);
@@ -92,20 +92,20 @@ button {
     background-color: black;
    }
 
-   button.c3{
+   .button1.c3{
     position: fixed;
     bottom: 30%;
    }
-   button.c2{
+   .button1.c2{
     position: fixed;
     bottom: 45%;
    }
-   button.c1{
+   .button1.c1{
     position: fixed;
     bottom: 60%;
    }
 
-   button.c4{
+   .button1.c4{
     position: fixed;
     bottom: 15%;
    }
@@ -213,8 +213,6 @@ button {
 
 
 
-/* From Uiverse.io by ElsayedShamsEldeen */ 
-/* The switch - the box around the speaker*/
 .toggleSwitch {
     width: 50px;
     height: 50px;
@@ -237,10 +235,12 @@ button {
   
   .bell {
     width: 18px;
+
   }
   
   .bell path {
     fill: white;
+
   }
   
   .speaker {
@@ -256,6 +256,7 @@ button {
   
   .speaker svg {
     width: 38px;
+    
   }
   
   .mute-speaker {
@@ -292,7 +293,7 @@ button {
   #checkboxInput:hover + .toggleSwitch {
     background-color: rgb(61, 61, 61);
   }
-
+  
 
   .rein {
     position: fixed;
