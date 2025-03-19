@@ -127,3 +127,10 @@ checkboxInput.addEventListener('change', function() {
     });
   }
 });
+
+
+
+function reiniciar(){
+  location.reload();
+
+}
