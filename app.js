@@ -4,15 +4,37 @@ const cancionesazar = [
   "https://raw.githubusercontent.com/edseguu/canciones/main/cancion%20(3).mp3",
   "https://raw.githubusercontent.com/edseguu/canciones/main/cancion%20(4).mp3",
   "https://raw.githubusercontent.com/edseguu/canciones/main/cancion%20(5).mp3"
-]
-function cancionazar(){
+];
+
+let audioReproduciendo = null;
+
+function cancionazar() {
+  if (audioReproduciendo) {
+    audioReproduciendo.pause();
+  }
+
   let i = Math.floor(Math.random() * cancionesazar.length);
   let r = cancionesazar[i];
-  
-  var audio = new Audio(r);
-  audio.loop = true; // Establecer loop en true
-  audio.play();
-  
+
+  audioReproduciendo = new Audio(r);
+  audioReproduciendo.loop = true;
+  audioReproduciendo.play();
+
+  const toggle = document.querySelector(".toggleSwitch");
+  toggle.style.display="none";
+}
+
+function baile(){
+
+    const paginavieja = document.querySelector(".pagina1");
+    const paginanueva = document.querySelector(".pagina2");
+    paginavieja.replaceWith(paginanueva);
+    paginanueva.classList.add("mostrar");
+
+
+    const videomostrar = document.querySelector(".demo");
+    videomostrar.style.display="block";
+
 }
 
 function baile(){
