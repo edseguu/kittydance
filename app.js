@@ -82,4 +82,26 @@ document.addEventListener('touchmove', function (event) {
   }
 }, { passive: false });
 
+const checkboxInput = document.getElementById('checkboxInput');
+const videos = document.querySelectorAll('video');
+const audios = document.querySelectorAll('audio');
 
+checkboxInput.addEventListener('change', function() {
+  if (this.checked) {
+    // Si el checkbox está marcado (mute), silencia todos los videos y audios
+    videos.forEach(video => {
+      video.pause = true;
+    });
+    audios.forEach(audio => {
+      audio.muted = true;
+    });
+  } else {
+    // Si el checkbox está desmarcado (unmute), restaura el sonido de los videos y audios
+    videos.forEach(video => {
+      video.pause = false;
+    });
+    audios.forEach(audio => {
+      audio.muted = false;
+    });
+  }
+});
